@@ -387,6 +387,148 @@
     color: var(--gold); 
     background: rgba(201,168,76,0.08);
   }
+
+  /* WORK SAMPLES */
+  .work-samples { background: var(--white); }
+  .work-samples .section-title { color: var(--navy); }
+  .tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 2.5rem; flex-wrap: wrap; }
+  .tab-btn {
+    padding: 0.75rem 1.5rem; font-size: 0.85rem; font-weight: 500;
+    color: var(--text-light); background: none; border: none; cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -2px;
+    transition: color 0.2s, border-color 0.2s; font-family: 'Inter', sans-serif;
+    letter-spacing: 0.02em;
+  }
+  .tab-btn.active { color: var(--navy); border-bottom-color: var(--gold); font-weight: 600; }
+  .tab-btn:hover { color: var(--navy); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* SCOPE GRID */
+  .scope-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+  .scope-card {
+    background: var(--cream); border-radius: 8px; padding: 1.5rem;
+    border-left: 4px solid var(--gold);
+  }
+  .scope-card h4 { font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .scope-card ul { list-style: none; }
+  .scope-card ul li { font-size: 0.875rem; color: var(--text-mid); padding: 0.25rem 0; padding-left: 1rem; position: relative; line-height: 1.5; }
+  .scope-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; top: 0.3rem; }
+
+  /* STRATEGY PILLARS */
+  .pillar { background: var(--cream); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; }
+  .pillar-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+  .pillar-num { width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .pillar h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); }
+  .initiative { background: var(--white); border-radius: 6px; padding: 1.25rem; margin-bottom: 0.75rem; border-left: 3px solid var(--gold); }
+  .initiative h5 { font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+  .initiative p { font-size: 0.855rem; color: var(--text-mid); line-height: 1.6; margin-bottom: 0.5rem; }
+  .target-badge { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--success); background: rgba(45,125,70,0.1); border-radius: 3px; padding: 0.2rem 0.6rem; }
+
+  /* AI PROPOSAL */
+  .proposal-intro { background: var(--navy); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; }
+  .proposal-intro h4 { color: var(--gold-light); font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+  .proposal-intro p { color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.7; }
+  .proposal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 2rem; }
+  .proposal-card { background: var(--cream); border-radius: 8px; padding: 1.5rem; }
+  .proposal-card .p-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+  .proposal-card h5 { font-size: 0.875rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+  .proposal-card p { font-size: 0.845rem; color: var(--text-mid); line-height: 1.6; }
+  .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .value-item { background: var(--white); border-radius: 6px; padding: 1.25rem; border-top: 3px solid var(--gold); }
+  .value-item h5 { font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+  .value-item p { font-size: 0.82rem; color: var(--text-mid); line-height: 1.55; }
+  .proposal-sub { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 1.75rem 0 0.75rem; }
+
+
+  /* FEATURED WORK */
+  .featured { background: var(--white); }
+  .featured-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .work-card {
+    background: var(--cream);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .work-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(15,31,61,0.10); }
+  .work-card-header {
+    background: var(--navy);
+    padding: 1.5rem;
+    display: flex; align-items: flex-start; gap: 1rem;
+  }
+  .work-card-icon {
+    font-size: 1.6rem; flex-shrink: 0; margin-top: 2px;
+  }
+  .work-card-header h3 {
+    font-size: 1rem; font-weight: 700;
+    color: var(--gold-light); line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  .work-card-header p {
+    font-size: 0.78rem; color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+  }
+  .work-card-body {
+    padding: 1.5rem; flex: 1;
+    display: flex; flex-direction: column; gap: 0.75rem;
+  }
+  .work-card-body p {
+    font-size: 0.875rem; color: var(--text-mid); line-height: 1.65;
+  }
+  .work-pillar {
+    background: var(--white);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    border-left: 3px solid var(--gold);
+  }
+  .work-pillar h4 {
+    font-size: 0.8rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 0.3rem;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .work-pillar p {
+    font-size: 0.8rem; color: var(--text-mid); line-height: 1.5; margin: 0;
+  }
+  .work-tag {
+    display: inline-block;
+    font-size: 0.72rem; font-weight: 500;
+    color: var(--navy);
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 3px;
+    padding: 0.25rem 0.6rem;
+    margin: 0.2rem 0.2rem 0 0;
+  }
+  .work-tags { margin-top: 0.5rem; }
+  .work-target {
+    background: rgba(45,125,70,0.08);
+    border: 1px solid rgba(45,125,70,0.2);
+    border-radius: 6px;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.78rem;
+    color: var(--success);
+    font-weight: 500;
+  }
+  .ops-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;
+    margin-top: 0.5rem;
+  }
+  .ops-item {
+    background: var(--white);
+    border-radius: 5px;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.775rem;
+    color: var(--text-mid);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .ops-item::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
 </style>
 </head>
 <body>
@@ -397,6 +539,7 @@
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
+    <a href="#featured-work">Work</a>
     <a href="#ai-strategy">AI Strategy</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -568,6 +711,129 @@
 </section>
 
 <!-- KEY ACHIEVEMENTS -->
+
+<!-- FEATURED WORK -->
+<section class="featured" id="featured-work">
+  <div class="section-inner">
+    <div class="section-tag">Work Product</div>
+    <h2 class="section-title">Featured Work & Initiatives</h2>
+    <p class="section-sub">Real deliverables from my time leading CX at Branch International — strategy, proposals, and operational scope that go beyond a job description.</p>
+
+    <div class="featured-grid">
+
+      <!-- CARD 1: CS STRATEGY -->
+      <div class="work-card">
+        <div class="work-card-header">
+          <div class="work-card-icon">📋</div>
+          <div>
+            <h3>2026 CS Department Strategy</h3>
+            <p>Authored & presented to leadership · Branch International · 2025</p>
+          </div>
+        </div>
+        <div class="work-card-body">
+          <p>A company-wide customer service strategy covering three pillars — built to drive retention, reduce cost, and increase product trust. Each pillar contained specific initiatives, cross-functional dependencies, targets, and risk mitigation plans.</p>
+          <div class="work-pillar">
+            <h4>Pillar 1 — Customer Retention</h4>
+            <p>Rapid Fraud Escalation Framework (100% within 2 min) · Structured dissatisfied-customer recovery programme targeting 60% recovery · Proactive alert system for service downtime · KYC simplification targeting 50% reduction in contacts.</p>
+          </div>
+          <div class="work-pillar">
+            <h4>Pillar 2 — Cost Optimisation</h4>
+            <p>Workforce Management system deployment targeting shrinkage from 26% → under 15% · Chatbot expansion to 50% of total chat volume · Call routing via tagging and analytics · CRB self-service automation targeting 60% reduction in CRB calls.</p>
+          </div>
+          <div class="work-pillar">
+            <h4>Pillar 3 — Product Trust & Usage</h4>
+            <p>Know Your Score in-app campaign targeting 15% increase in active loan users · AI/NLP Sentiment Analysis on Branch Admin and Zendesk · Account Merge cross-functional initiative targeting 70% reduction in merge contacts.</p>
+          </div>
+          <div class="work-tags">
+            <span class="work-tag">CX Strategy</span>
+            <span class="work-tag">Workforce Planning</span>
+            <span class="work-tag">Chatbot</span>
+            <span class="work-tag">Fraud Ops</span>
+            <span class="work-tag">KYC</span>
+            <span class="work-tag">AI/NLP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: NLP PROPOSAL -->
+      <div class="work-card">
+        <div class="work-card-header">
+          <div class="work-card-icon">🧠</div>
+          <div>
+            <h3>AI/NLP Sentiment Analysis Proposal</h3>
+            <p>Designed & proposed to Engineering/ML working group · Branch International · 2025</p>
+          </div>
+        </div>
+        <div class="work-card-body">
+          <p>A detailed technical proposal to improve CSAT and FCR by implementing sentiment analysis across Branch Admin (in-app) and Zendesk (social media). Presented to the AI working group and engineering team for prioritisation.</p>
+          <div class="work-pillar">
+            <h4>Problem</h4>
+            <p>Low CSAT and FCR with no systematic way to detect tone issues, frustration, or repeat-contact patterns at scale across thousands of weekly interactions.</p>
+          </div>
+          <div class="work-pillar">
+            <h4>Proposed Solution</h4>
+            <p><strong>BERT/DistilBERT</strong> fine-tuned on customer service data for positive/neutral/negative classification · <strong>Emotion classification</strong> detecting anger, disappointment, confusion, gratitude · <strong>BERTopic/LDA</strong> topic modelling to identify top complaint drivers · <strong>Correlation analysis</strong> linking negative sentiment + long resolution time to low CSAT outcomes.</p>
+          </div>
+          <div class="work-pillar">
+            <h4>Business Value</h4>
+            <p>QA automation — prioritise negative-sentiment cases for review instead of manual sampling · Real-time escalation of frustrated customers · Agent empathy scoring per associate · Root cause identification by topic + sentiment pairing.</p>
+          </div>
+          <div class="work-target">🎯 Target: Measurable CSAT improvement and faster feedback loops for agent coaching</div>
+          <div class="work-tags">
+            <span class="work-tag">BERT/DistilBERT</span>
+            <span class="work-tag">BERTopic/LDA</span>
+            <span class="work-tag">Emotion Classification</span>
+            <span class="work-tag">QA Automation</span>
+            <span class="work-tag">NLP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: OPERATIONAL SCOPE -->
+      <div class="work-card">
+        <div class="work-card-header">
+          <div class="work-card-icon">⚙️</div>
+          <div>
+            <h3>Team Lead Operational Scope</h3>
+            <p>Day-to-day responsibilities · Branch International CS Team Lead · 2024–2026</p>
+          </div>
+        </div>
+        <div class="work-card-body">
+          <p>What I actually owned and ran daily as Team Lead — beyond the title. This is the full operational picture across people, process, performance, and cross-functional coordination.</p>
+          <div class="ops-grid">
+            <div class="ops-item">Biweekly 1:1s with all associates</div>
+            <div class="ops-item">Escalation queue management (KE, TZ, BP)</div>
+            <div class="ops-item">Weekly scorecard updates & reporting</div>
+            <div class="ops-item">Fraud & wallet freeze case handling</div>
+            <div class="ops-item">Leave planning & OT tracker (monthly)</div>
+            <div class="ops-item">CRB clearance & loan deletion requests</div>
+            <div class="ops-item">Spot-check schedule adherence (all shifts)</div>
+            <div class="ops-item">GP rating monitoring & review responses</div>
+            <div class="ops-item">TikTok DM & social media backlog</div>
+            <div class="ops-item">CS onboarding & buddy programme</div>
+            <div class="ops-item">Cross-team sync facilitation (QA, Eng, Product)</div>
+            <div class="ops-item">Slab process documentation (CS Kenya)</div>
+            <div class="ops-item">DPO email & data deletion requests</div>
+            <div class="ops-item">Zendesk-TikTok integration project</div>
+            <div class="ops-item">Kudos & rewards recognition (monthly)</div>
+            <div class="ops-item">Sentiment analysis AI working group</div>
+          </div>
+          <div class="work-tags" style="margin-top:1rem;">
+            <span class="work-tag">People Management</span>
+            <span class="work-tag">Zendesk</span>
+            <span class="work-tag">QA</span>
+            <span class="work-tag">Fraud Ops</span>
+            <span class="work-tag">Workforce Planning</span>
+            <span class="work-tag">Cross-functional</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <section class="achievements" id="achievements">
   <div class="section-inner">
     <div class="section-tag">Impact</div>
@@ -681,6 +947,239 @@
 </section>
 
 
+
+<!-- WORK SAMPLES -->
+<section class="work-samples" id="work-samples">
+  <div class="section-inner">
+    <div class="section-tag">Proof of Work</div>
+    <h2 class="section-title">What I actually built</h2>
+    <p class="section-sub">Real work product from my tenure at Branch International — not claims, but documented evidence of strategy, leadership, and execution.</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('scope')">Scope of Role</button>
+      <button class="tab-btn" onclick="showTab('strategy')">CS Department Strategy</button>
+      <button class="tab-btn" onclick="showTab('ai')">AI / NLP Proposal</button>
+    </div>
+
+    <!-- TAB 1: SCOPE -->
+    <div class="tab-panel active" id="tab-scope">
+      <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:1.75rem;line-height:1.7;">The following represents the full scope of my Team Lead responsibilities at Branch International — drawn from my formal handover documentation. This is what I owned, ran, and was accountable for on a daily and weekly basis.</p>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <h4>🎫 Issue Resolution & Escalations</h4>
+          <ul>
+            <li>Monitored and actioned all escalation queues (KE, TZ, BP) hourly</li>
+            <li>Tracked CS, Product, Fraud, Engineering, and Loan Review channels for live issues</li>
+            <li>Managed frozen wallet and savings account cases daily</li>
+            <li>Handled fraudulent claim investigations via Issue Tracker</li>
+            <li>Processed CRB clearance, loan deletion, and DPO email requests</li>
+          </ul>
+        </div>
+        <div class="scope-card">
+          <h4>📅 Workforce & Resource Planning</h4>
+          <ul>
+            <li>Built and maintained the team schedule 4–6 weeks in advance</li>
+            <li>Monitored real-time queue volumes and authorised overtime as needed</li>
+            <li>Managed off-day swaps, annual leave planning, and leave tracker</li>
+            <li>Ensured minimum 7 leave days per associate per quarter</li>
+            <li>Cross-checked OT claims against schedule and productivity data</li>
+            <li>Maintained the overtime tracker updated by the 10th of each month</li>
+          </ul>
+        </div>
+        <div class="scope-card">
+          <h4>🤝 Team Performance & Coaching</h4>
+          <ul>
+            <li>Conducted biweekly 1:1s covering performance, escalations, and leave</li>
+            <li>Ran weekly team syncs sharing QA, Product, and operational updates</li>
+            <li>Spot-checked schedule adherence and productivity across all shifts</li>
+            <li>Updated team scorecard every Monday and posted top performers on Kudos channel</li>
+            <li>Maintained the CS Rewards & Recognition document monthly</li>
+            <li>Worked with QA to share weekly breakdowns by issue type per associate</li>
+          </ul>
+        </div>
+        <div class="scope-card">
+          <h4>⭐ Quality, Reviews & Social</h4>
+          <ul>
+            <li>Monitored and responded to Google Play ratings — 4-star and below daily</li>
+            <li>Managed TikTok DMs and coordinated access for call centre support</li>
+            <li>Tracked GP rating fluctuations weekly in the GP rating summary document</li>
+            <li>Ensured full team coverage across In-app, SM, TikTok, GP Reviews, and Call Centre</li>
+            <li>Worked with Yvonne to explore Zendesk integration for TikTok DMs</li>
+          </ul>
+        </div>
+        <div class="scope-card">
+          <h4>📚 Documentation & Process</h4>
+          <ul>
+            <li>Updated and added CS processes on Slab (Kenya section) continuously</li>
+            <li>Maintained onboarding programme: 2-week structured training with buddy system</li>
+            <li>Managed message targets from 100–150 (Week 1) to 500–600 (Month 2)</li>
+            <li>Collaborated with QA, Fraud, and Payment Ops on Slab documentation project</li>
+          </ul>
+        </div>
+        <div class="scope-card">
+          <h4>🤖 AI & Innovation</h4>
+          <ul>
+            <li>Championed the sentiment analysis initiative with the AI working group</li>
+            <li>Pushed for Engineering prioritisation of the NLP proposal</li>
+            <li>Worked towards Zendesk integration for TikTok auto-responses</li>
+            <li>Explored call routing improvements via call tagging and analytics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: STRATEGY -->
+    <div class="tab-panel" id="tab-strategy">
+      <p style="font-size:0.9rem;color:var(--text-mid);margin-bottom:1.75rem;line-height:1.7;">In late 2025, I authored Branch International's 2026 Customer Service Department Strategy — a three-pillar framework covering customer retention, cost optimisation, and product trust. Below is a summary of the key initiatives I proposed and owned.</p>
+
+      <div class="pillar">
+        <div class="pillar-header">
+          <div class="pillar-num">1</div>
+          <h3>Customer Retention — Strengthen confidence through transparent, empathetic resolution</h3>
+        </div>
+        <div class="initiative">
+          <h5>Rapid Fraud Escalation Framework</h5>
+          <p>Implemented a Fraud Handling Guide enabling call centre associates to escalate fraud cases within 2 minutes using prefilled templates and a dedicated workflow.</p>
+          <span class="target-badge">Target: 100% fraud escalation within 2 min · Resolution within 24 hours</span>
+        </div>
+        <div class="initiative">
+          <h5>Structured Customer Recovery Programme</h5>
+          <p>Built a follow-up and recovery system for customers who gave low CSAT or experienced repeated contact — using in-app CS follow-ups, automated messages, apologies, and priority handling.</p>
+          <span class="target-badge">Target: Recover 60% of dissatisfied customers · Reduce churn by 15%</span>
+        </div>
+        <div class="initiative">
+          <h5>Proactive Real-Time Alert System</h5>
+          <p>Proposed integration of alert systems that detect service delays, failed logins, or downtime and automatically notify customers via in-app or SMS — including ETAs and escalation options.</p>
+          <span class="target-badge">Target: Reduce repeat contacts by 30% · Improve CSAT by +10 points</span>
+        </div>
+        <div class="initiative">
+          <h5>Proactive KYC Support</h5>
+          <p>Simplify KYC steps with in-app real-time progress updates and retry prompts to reduce friction in the loan and wallet onboarding journey.</p>
+          <span class="target-badge">Target: Reduce KYC contacts by 50% · Cut KYC completion time by 30%</span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-header">
+          <div class="pillar-num">2</div>
+          <h3>Cost Optimisation — Reduce repetitive contact through automation and self-service</h3>
+        </div>
+        <div class="initiative">
+          <h5>Workforce Management & Shrinkage Control</h5>
+          <p>Proposed deployment of a WFM system for volume forecasting, optimal scheduling, and real-time adherence tracking — with proactive leave planning policies.</p>
+          <span class="target-badge">Target: Shrinkage from 26% → ≤15% · Maintain SLA above 75%</span>
+        </div>
+        <div class="initiative">
+          <h5>Chatbot Expansion Strategy</h5>
+          <p>Scaled chatbot capacity to handle up to 50% of total chat volume — expanding beyond FAQs to cover transaction status checks and account updates.</p>
+          <span class="target-badge">Target: Reduce manual handling by 25% · Cut cost-per-contact by 20% by Q3 2026</span>
+        </div>
+        <div class="initiative">
+          <h5>Smart Call Routing</h5>
+          <p>Used call tagging and analytics to route specialist queries (CRB, fraud) directly to trained associates — improving first-contact resolution without unnecessary transfers.</p>
+          <span class="target-badge">Target: Increase FCR by +10 points · Lower repeat calls by 20%</span>
+        </div>
+        <div class="initiative">
+          <h5>CRB Automation</h5>
+          <p>Proposed integrating CRB clearance status and batch number retrieval directly into IVR and self-service menus — allowing customers to self-serve via SMS after verification.</p>
+          <span class="target-badge">Target: Reduce CRB-related calls by 60%</span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-header">
+          <div class="pillar-num">3</div>
+          <h3>Product Trust — Strengthen confidence through clarity, control, and education</h3>
+        </div>
+        <div class="initiative">
+          <h5>Know Your Score Campaign</h5>
+          <p>Proposed an in-app dashboard showing customers their loan health, repayment patterns, and how to qualify for higher limits — reducing limit-related support queries.</p>
+          <span class="target-badge">Target: Increase active loan product users by 15% · Reduce limit queries by 30%</span>
+        </div>
+        <div class="initiative">
+          <h5>AI/NLP Sentiment Analysis</h5>
+          <p>Proposed message sentiment analysis across Branch Admin and Zendesk (Social Media) using BERT/DistilBERT models — to capture unsolicited customer feedback and improve CSAT and FCR at scale.</p>
+          <span class="target-badge">Target: Real-time unhappy customer detection · Automated QA prioritisation</span>
+        </div>
+        <div class="initiative">
+          <h5>Account Merge Issue Resolution</h5>
+          <p>Launched a cross-functional initiative with KYC to improve account merge handling — the top driver of support contacts at the time.</p>
+          <span class="target-badge">Target: Reduce account merge contacts by 70%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: AI PROPOSAL -->
+    <div class="tab-panel" id="tab-ai">
+      <div class="proposal-intro">
+        <h4>AI/NLP Sentiment Analysis Proposal — Branch International, 2025</h4>
+        <p>Authored and presented to the AI working group (led by Engineering leads Kiboye and Austin). The proposal addressed a persistent challenge: low CSAT and FCR scores with no systematic way to understand why customers were dissatisfied at scale. The solution: deploy NLP-based sentiment analysis across in-app support (Branch Admin) and social media (Zendesk) to detect unhappy customers in real time and act before they churned.</p>
+      </div>
+
+      <p class="proposal-sub">Problem & Solution</p>
+      <div class="initiative" style="margin-bottom:1.75rem;">
+        <h5>Problem Statement</h5>
+        <p>Low customer satisfaction (CSAT) and First Contact Resolution (FCR) scores — with no scalable mechanism to identify which conversations were causing dissatisfaction or what agents could do differently in real time.</p>
+        <h5 style="margin-top:0.75rem;">Proposed Solution</h5>
+        <p>Sentiment analysis across Branch Admin (in-app) and Zendesk (social media) — using pre-trained NLP models fine-tuned on Branch's own customer conversation data to classify tone, detect emotion, and surface patterns at scale.</p>
+      </div>
+
+      <p class="proposal-sub">AI Techniques Proposed</p>
+      <div class="proposal-grid">
+        <div class="proposal-card">
+          <div class="p-icon">🧠</div>
+          <h5>Sentiment Analysis (NLP)</h5>
+          <p>BERT / DistilBERT models fine-tuned on Branch customer service data to classify messages as positive, neutral, or negative — and detect frustration, confusion, or satisfaction in real time.</p>
+        </div>
+        <div class="proposal-card">
+          <div class="p-icon">💬</div>
+          <h5>Emotion Classification</h5>
+          <p>Going beyond positive/negative — detecting specific emotions: anger, disappointment, gratitude, confusion. Enabling agents and QA teams to respond to the emotional state, not just the issue.</p>
+        </div>
+        <div class="proposal-card">
+          <div class="p-icon">📊</div>
+          <h5>Topic Modelling</h5>
+          <p>Using BERTopic / LDA clustering to identify what customers complain about or praise most often — surfacing the highest-volume pain points without manual review of thousands of messages.</p>
+        </div>
+        <div class="proposal-card">
+          <div class="p-icon">🔗</div>
+          <h5>Correlation Analysis</h5>
+          <p>Combining sentiment data with CSAT and FCR metrics to find predictive patterns — e.g., "negative tone + long resolution time = 80% probability of low CSAT rating" — enabling proactive intervention.</p>
+        </div>
+      </div>
+
+      <p class="proposal-sub">Data Sources Identified</p>
+      <div class="initiative" style="margin-bottom:1.75rem;">
+        <p><strong>Chat data:</strong> In-app customer messages from Branch Admin · <strong>CSAT data:</strong> End-of-interaction survey responses from Typeform · <strong>Resolution data:</strong> Closed tickets from Zendesk · <strong>Training data:</strong> Labeled sample messages (positive / neutral / negative) tagged to Branch's tone and language style, including Kiswahili-English code-switching patterns common in the Kenyan market.</p>
+      </div>
+
+      <p class="proposal-sub">Business Value</p>
+      <div class="value-grid">
+        <div class="value-item">
+          <h5>📈 Boost CSAT & FCR</h5>
+          <p>Identify tone issues early and retrain agents before customers churn — moving from reactive to proactive quality management.</p>
+        </div>
+        <div class="value-item">
+          <h5>⚡ Faster Feedback Loops</h5>
+          <p>Real-time detection of unhappy customers allows instant escalation and recovery — reducing the window between dissatisfaction and resolution.</p>
+        </div>
+        <div class="value-item">
+          <h5>🤖 QA Automation</h5>
+          <p>Instead of manually reviewing every chat, prioritise cases with negative sentiment flags — making QA faster, more targeted, and more impactful.</p>
+        </div>
+        <div class="value-item">
+          <h5>🔍 Root Cause Identification</h5>
+          <p>Topic + sentiment pairing reveals which specific issues (e.g., "KYC rejection", "loan limit") cause the most frustration — enabling product teams to fix the right things.</p>
+        </div>
+        <div class="value-item">
+          <h5>👤 Agent Performance Insights</h5>
+          <p>Sentiment scores become a QA metric — tracking empathy, tone, and clarity per associate, enabling targeted coaching based on real conversation data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DOWNLOAD BAR -->
 <div style="background: rgba(201,168,76,0.12); border-top: 1px solid rgba(201,168,76,0.25); border-bottom: 1px solid rgba(201,168,76,0.25); padding: 1.25rem 2rem; text-align: center;">
   <div style="max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
@@ -738,6 +1237,14 @@
       observe.unobserve(el);
     });
   }, { threshold: 0.3 });
+
+  function showTab(name) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+  }
+
   counters.forEach(c => observe.observe(c));
 </script>
 </body>
